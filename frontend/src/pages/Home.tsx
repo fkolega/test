@@ -22,7 +22,7 @@ export default function HomePage() {
           {/* Welcome Section */}
           <div className="text-center mb-6">
             <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-3 leading-tight">
-              Welcome to your new web app!
+              Welcome to your <span className="underline">new web app</span>!
             </h2>
             <p className="text-base text-gray-400 dark:text-gray-500 leading-snug">
               Your web app is ready to launch. Start building amazing experiences.
