@@ -4,7 +4,26 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-black relative overflow-hidden">
       {/* Red Bubble Background */}
-      <div className="absolute top-20 right-16 w-96 h-96 bg-red-500 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+      <div className="absolute top-20 right-16 w-96 h-96 bg-gradient-to-br from-red-500 via-pink-500 to-red-600 rounded-full opacity-20 blur-3xl cursor-pointer hover:cursor-crosshair" 
+           style={{
+             animation: 'pulse 2s infinite',
+             transform: 'translateX(0px) translateY(0px)',
+             animationName: 'pulse, sway',
+             animationDuration: '2s, 4s',
+             animationIterationCount: 'infinite, infinite',
+             animationTimingFunction: 'ease-in-out, ease-in-out'
+           }}></div>
+      
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes sway {
+            0%, 100% { transform: translateX(0px) translateY(0px); }
+            25% { transform: translateX(15px) translateY(-10px); }
+            50% { transform: translateX(-10px) translateY(5px); }
+            75% { transform: translateX(20px) translateY(-15px); }
+          }
+        `
+      }} />
       
       {/* Header */}
       <header className="border-b border-gray-700 relative z-10">
