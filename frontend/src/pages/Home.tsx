@@ -29,8 +29,14 @@ export default function HomePage() {
       <header className="border-b border-gray-700 relative z-10">
         <div className="py-4 px-6">
           <h1 className="text-base font-semibold">
-            <span className="text-gray-800 dark:text-gray-100">Your</span>
-            <span className="text-gray-500 dark:text-gray-400 font-normal">Project</span>
+            <span className="text-yellow-400" style={{
+              textShadow: '0 0 10px #facc15, 0 0 20px #facc15, 0 0 30px #facc15',
+              filter: 'drop-shadow(0 0 8px #facc15)'
+            }}>Your</span>
+            <span className="text-yellow-300 font-normal" style={{
+              textShadow: '0 0 10px #fde047, 0 0 20px #fde047, 0 0 30px #fde047',
+              filter: 'drop-shadow(0 0 8px #fde047)'
+            }}>Project</span>
           </h1>
         </div>
       </header>
