@@ -1,3 +1,5 @@
 backend.log
 frontend.log
 
+# Dummy directory
+dummy_dir/
