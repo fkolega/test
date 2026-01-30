@@ -34,12 +34,16 @@ app.get('/api/health', async (c) => {
       mongodb: 'connected'
     });
   } catch (error) {
+    // Log detailed error information for debugging (server-side only)
+    console.error('Health check failed - MongoDB connection error:', error);
+    
+    // Return generic error message to client (no sensitive details)
     return c.json({
       status: 'unhealthy',
       message: 'Backend is running but MongoDB connection failed',
       timestamp: new Date().toISOString(),
       mongodb: 'disconnected',
-      error: error.message
+      error: 'Database connection error'
     }, 503);
   }
 });
